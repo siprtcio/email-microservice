@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 
-	healthpb "github.com/crossphoton/email-microservice/health"
 	mail "github.com/xhit/go-simple-mail/v2"
 	"go.uber.org/zap"
 )
@@ -15,11 +14,6 @@ var smtpClient *mail.SMTPClient
 // to be used to create a gRPC server
 type EmailServer struct {
 	UnimplementedEmailServiceServer
-	healthpb.UnimplementedHealthServer
-}
-
-func (s *EmailServer) Check(ctx context.Context, req *healthpb.HealthCheckRequest) (*healthpb.HealthCheckResponse, error) {
-	return &healthpb.HealthCheckResponse{Status: healthpb.HealthCheckResponse_SERVING}, nil
 }
 
 func sendEmailFromMessage(message *mail.Email) error {

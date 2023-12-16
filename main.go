@@ -8,10 +8,9 @@ import (
 	"os"
 	"strconv"
 
-	healthpb "github.com/crossphoton/email-microservice/health"
-	"github.com/crossphoton/email-microservice/src"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_zap "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap"
+	"github.com/siprtcio/email-microservice/src"
 
 	// grpc_opentracing "github.com/grpc-ecosystem/go-grpc-middleware/tracing/opentracing"
 	grpc_validator "github.com/grpc-ecosystem/go-grpc-middleware/validator"
@@ -113,7 +112,6 @@ func main() {
 
 	emailServer := src.EmailServer{}
 	src.RegisterEmailServiceServer(server, &emailServer)
-	healthpb.RegisterHealthServer(server, &emailServer)
 
 	// Listening to port
 	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", config.Port))

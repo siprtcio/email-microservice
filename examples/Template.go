@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/crossphoton/email-microservice/examples/src"
+	"github.com/siprtcio/email-microservice/examples/src"
 )
 
 func sendEmailWithTemplate(req *src.SendEmailWithTemplateRequest) (*src.ResponseMessage, error) {
@@ -24,7 +24,7 @@ func TemplateEmail() (*src.ResponseMessage, error) {
 	emailRequest := src.SendEmailWithTemplateRequest{
 		Recipients: &src.Recipients{
 			To: []string{
-				"Aditya Agrawal<adiag1200@gmail.com>",
+				"Surendra Tiwari<surendra@siprtc.io>",
 			},
 		},
 		TemplateName: "email-confirm",

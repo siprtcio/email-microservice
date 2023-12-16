@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/crossphoton/email-microservice/examples/src"
+	"github.com/siprtcio/email-microservice/examples/src"
 )
 
 func sendEmailStd(req *src.SendEmailRequest) (*src.ResponseMessage, error) {
@@ -25,13 +25,13 @@ func StdEmail() (*src.ResponseMessage, error) {
 	emailRequest := src.SendEmailRequest{
 		Recipients: &src.Recipients{
 			To: []string{
-				"Aditya Agrawal<email@e.crossphoton.tech>",
+				"surendra <surendratiwari3@gmail.com>",
 			},
 			Cc: []string{
-				"Spam Address<spam@e.crossphoton.tech>",
+				"surendra <surendra@siprtc.io>",
 			},
 			Bcc: []string{
-				"support@e.crossphoton.tech",
+				"admin@siprtc.io",
 			},
 		},
 		Subject:     "Hi there. I hope you're good",

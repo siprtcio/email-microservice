@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/crossphoton/email-microservice/examples/src"
+	"github.com/siprtcio/email-microservice/examples/src"
 )
 
 func sendRawEmail(req *src.RawSendEmailRequest) (*src.ResponseMessage, error) {
@@ -32,7 +32,7 @@ func RawEmail() (*src.ResponseMessage, error) {
 }
 
 const RawEmailBody = `From: "Sender Name" <sender@example.com>
-To: recipient@example.com
+To: surendratiwari3@gmail.com
 Subject: Customer service contact info
 Content-Type: multipart/mixed;
     boundary="a3f166a86b56ff6c37755292d690675717ea3cd9de81228ec2b76ed4a15d6d1a"

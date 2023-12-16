@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/crossphoton/email-microservice/examples/src"
+	"github.com/siprtcio/email-microservice/examples/src"
 	"google.golang.org/grpc"
 )
 
